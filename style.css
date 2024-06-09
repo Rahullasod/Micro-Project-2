@@ -105,6 +105,7 @@ ul {
     bottom: 0;
     right: 10%;
     height: 120px;
+    z-index: 999;
 }
 .socialicons {
     display: flex;
@@ -167,7 +168,7 @@ ul {
     display: flex;
     column-gap: 30px;
 }
-.tabs {
+.tabsbox {
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 30px;
@@ -176,13 +177,14 @@ ul {
     flex-direction: column;
     row-gap: 50px;
 }
-.tab1, .tab2, .tab3 {
+.tab_btn{
     height: 130px;
     /* border: 1px solid red; */
     border-radius: 20px;
     align-items: center;
 }
-.tab1{
+
+/* .tab1{
     background-color: #BCE0F6;
     font-family: DM sans;
     font-size: 20px;
@@ -192,9 +194,9 @@ ul {
     text-align: center;
     align-content: center;
     box-shadow: 0px 6px 35px 0px #00000063;
-
-}
-.tab2{
+    border: none;
+} */
+.tab_btn{
     border: 5px solid white;
     font-family: DM sans;
     font-size: 20px;
@@ -202,18 +204,15 @@ ul {
     text-align: center;
     align-content: center;
     color: white;
-}
-.tab3{
-    border: 5px solid white;
-    font-family: DM sans;
-    font-size: 20px;
-    font-weight: 700px;  
-    align-items: center;
-    text-align: center;
-    align-content: center;
-    color: white;
+    background-color: transparent;
+    cursor: pointer;
 }
 
+.tab_btn.active {
+    background-color: #BCE0F6;
+    color: #000000;
+    border: none;
+}
 
 .details {
     width: 70%;
@@ -224,6 +223,7 @@ ul {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 30px;
+    position: relative;
 }
 
 h1 {
@@ -231,19 +231,27 @@ h1 {
     font-family: inter;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-left: -30px;
 }
 
 .userdetails {
     padding-left: 30px;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    row-gap: 20px;
+    /* row-gap: 50px; */
+    display: none;
 }
+
+.userdetails.active{
+    display: block;
+}
+
 
 .formcoloumn {
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 .formtitle {
     font-family: Roboto;
@@ -270,8 +278,9 @@ h1 {
     font-family: Roboto;
     border-radius: 10px;
     position: absolute;
-    right: 15%;
-    margin-top: 12%;
+    right: 5%;
+    bottom: 30px;
+    
 }
 .nxtbtncont {
 
