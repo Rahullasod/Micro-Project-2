@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul Lasod Micro Project 2</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="scriptsheet" href="./script.js"> -->
 </head>
 <body>
     <img class="contactus" src="./Images/logo contact us.png">
@@ -54,28 +55,60 @@
         </span>
     </div>
     <div class="body3">
-        <div class="tabs">
-            <span class="tab1">
+        <div class="tabsbox">
+            <button class="tab_btn" >
                 <h2>YOUR INFO</h2>
-            </span>
-            <span class="tab2">
+            </button>
+            <button class="tab_btn" >
                 <h2>BOOKMARKS</h2>
-            </span>
-            <span class="tab3">
+            </button>
+            <button class="tab_btn">
                 <h2>SETTINGS</h2>
-            </span>
+            </button>
         </div>
         <div class="details">
-            <h1>Your information</h1>
+            
             <ul class="userdetails">
+                <h1>Your information</h1>
                <div class="formcoloumn"><li class="formtitle">Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">Atul Singhal</li></div>
                <div class="formcoloumn"><li class="formtitle">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">atul@gmail.com</li></div>
                <div class="formcoloumn"><li class="formtitle">Phone &nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">+91 8131424888</li></div>
                <div class="formcoloumn"><li class="formtitle">Marks &nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">500.00</li></div>
             </ul>
+            <ul class="userdetails" >
+                <h1>Bookmarks</h1>
+               <div class="formcoloumn"><li class="formtitle">Name2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">Atul Singhal</li></div>
+               <div class="formcoloumn"><li class="formtitle">Email2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">atul@gmail.com</li></div>
+               <div class="formcoloumn"><li class="formtitle">Phone2 &nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">+91 8131424888</li></div>
+               <div class="formcoloumn"><li class="formtitle">Marks2 &nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">500.00</li></div>
+            </ul>
+            
+            <ul class="userdetails" >
+                <h1>Settings</h1>
+               <div class="formcoloumn"><li class="formtitle">Name3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">Atul Singhal</li></div>
+               <div class="formcoloumn"><li class="formtitle">Email3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">atul@gmail.com</li></div>
+               <div class="formcoloumn"><li class="formtitle">Phone3 &nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">+91 8131424888</li></div>
+               <div class="formcoloumn"><li class="formtitle">Marks3 &nbsp;&nbsp;&nbsp;&nbsp;:</li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="formans">500.00</li></div>
+            </ul>
             <div class="nxtbtncont"><button class="nextbtn">Next <img class="nexticon" src="./Images/Arrow 1.png"></button></div> 
         </div>
     </div>
  </div>
+ <script>
+
+    const tabs= document.querySelectorAll('.tab_btn')
+    const user_content= document.querySelectorAll('.userdetails')
+
+    tabs.forEach((tab, index)=>{
+        tab.addEventListener('click', ()=>{
+            tabs.forEach(tab=>{tab.classList.remove('active')});
+            tab.classList.add('active');
+             
+            user_content.forEach(userdetails=>{userdetails.classList.remove('active')});
+            user_content[index].classList.add('active');
+        })
+    })
+
+ </script>
 </body>
 </html>
