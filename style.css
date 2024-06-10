@@ -177,14 +177,14 @@ ul {
     flex-direction: column;
     row-gap: 50px;
 }
-.tab_btn{
+.tab_btn, .tab_btnselected{
     height: 130px;
     /* border: 1px solid red; */
     border-radius: 20px;
     align-items: center;
 }
 
-/* .tab1{
+.tab_btnselected{
     background-color: #BCE0F6;
     font-family: DM sans;
     font-size: 20px;
@@ -195,7 +195,7 @@ ul {
     align-content: center;
     box-shadow: 0px 6px 35px 0px #00000063;
     border: none;
-} */
+}
 .tab_btn{
     border: 5px solid white;
     font-family: DM sans;
@@ -208,11 +208,7 @@ ul {
     cursor: pointer;
 }
 
-.tab_btn.active {
-    background-color: #BCE0F6;
-    color: #000000;
-    border: none;
-}
+
 
 .details {
     width: 70%;
@@ -243,9 +239,11 @@ h1 {
     display: none;
 }
 
-.userdetails.active{
+.userdetailsselected{
     display: block;
 }
+
+
 
 
 .formcoloumn {
